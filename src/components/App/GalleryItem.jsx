@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
-function GalleryItem({ galleryItem }) {
+function GalleryItem({ galleryItem, handleLikeClick}) {
     const [displayPicture, setDisplayPicture] = useState(true);
 
     const pictureClick = () => {
         setDisplayPicture(!displayPicture);
+    }
+    const updateLike = (id) => {
+        handleLikeClick(id);
     }
 
     return (
@@ -12,14 +15,14 @@ function GalleryItem({ galleryItem }) {
             {displayPicture &&
                 <div>
                     <img onClick={pictureClick} src={galleryItem.path} alt="" width="100" height="100" />
-                    <button>LIKE</button>
+                    <button onClick={()=>updateLike(galleryItem.id)}>LIKE</button>
                     Likes: {galleryItem.likes}
                 </div>
             }
             {!displayPicture &&
                 <div>
                     <div onClick={pictureClick}>{galleryItem.description}</div>
-                    <button>LIKE</button>
+                    <button  onClick={()=>updateLike(galleryItem.id)} >LIKE</button>
                     Likes: {galleryItem.likes}
                 </div>
             }

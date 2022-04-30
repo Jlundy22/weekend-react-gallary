@@ -25,13 +25,25 @@ function App() {
     })
   }
 
+  const handleLikeClick = (id) => {
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`,
+      data: id
+    }).then(() => {
+      fetchGallery();
+    }).catch((error) => {
+      console.log('error in PUT /like', error)
+    })
+  }
+
 
 
   return (
     <div className="App">
       <Header />
       {(galleryList.length > 0) &&
-        <GalleryList galleryList={galleryList} />
+        <GalleryList galleryList={galleryList} handleLikeClick={handleLikeClick}/>
       }
     </div>
   );
