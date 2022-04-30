@@ -1,22 +1,24 @@
 import GalleryItem from './GalleryItem.jsx';
 
+import './GalleryList.css';
+
 function GalleryList({
     galleryList,
     handleLikeClick
-
 }) {
+
     return (
-        <ul>
-          {galleryList.map((galleryItem) => {
+    <div className='item-contatiner'>
+        {galleryList.map((galleryItem) => {
             return (
-              <GalleryItem 
+            <GalleryItem
                 key={galleryItem.id}
                 galleryItem={galleryItem}
                 handleLikeClick={handleLikeClick} />
             )
-          })}
-        </ul>
-      )
+        })}
+    </div>
+    )
 }
 
 export default GalleryList;

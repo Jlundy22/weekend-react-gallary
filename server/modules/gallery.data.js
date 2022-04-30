@@ -1,6 +1,6 @@
 const galleryItems = [
     { id: 1, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 },
-    { id: 2, path: 'images/Cali-wedding.jpg', description: 'Our friends wedding in Napa California.', likes: 0 },
+    { id: 2, path: 'images/Cali-wedding.jpg', description: 'Our friends\' wedding in Napa California.', likes: 0 },
     { id: 3, path: 'images/disc.png', description: 'My favorite hobby: Disc golf.', likes: 0 },
     { id: 4, path: 'images/goodboy-rusko.jpg', description: 'My dog rusko.', likes: 0 },
     { id: 5, path: 'images/lake-rusko.jpg', description: 'Rusko relaxing at the lake.', likes: 0 },
