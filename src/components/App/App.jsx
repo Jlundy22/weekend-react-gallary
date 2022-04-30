@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Header from './Header.jsx'
+import GalleryList from './GalleryList.jsx'
 
 function App() {
   useEffect(() => {
@@ -28,20 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      < Header />
-      <ul>
-        {galleryList.map((galleryItem) => {
-          return (
-            <li key={galleryItem.id}>
-              <img src={galleryItem.path} width="100" height="100"/>
-              {galleryItem.description}
-              <button>LIKE</button>
-              Likes: {galleryItem.likes}
-            </li>
-          )
-        })}
-      </ul>
-
+      <Header />
+      {(galleryList.length > 0) &&
+        <GalleryList galleryList={galleryList} />
+      }
     </div>
   );
 }
