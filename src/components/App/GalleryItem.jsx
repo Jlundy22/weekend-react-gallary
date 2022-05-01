@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import './GalleryItem.css';
 
+import Button from '@mui/material/Button';
+
 function GalleryItem({ 
     galleryItem,
     handleLikeClick
@@ -22,7 +24,7 @@ function GalleryItem({
                 <div className='container'>
                     <img onClick={pictureClick} src={galleryItem.path} alt=""/>
                     <div>    
-                        <button onClick={()=>updateLike(galleryItem.id)}>LIKE</button>
+                        <Button variant="contained" size="small" onClick={()=>updateLike(galleryItem.id)}>LIKE</Button>
                         <div>
                             Likes: {galleryItem.likes}
                         </div>
@@ -32,7 +34,7 @@ function GalleryItem({
             {!displayPicture &&
                 <div className='container'>
                     <div className='img-description' onClick={pictureClick}>{galleryItem.description}</div>
-                    <button onClick={()=>updateLike(galleryItem.id)} >LIKE</button>
+                    <Button variant="contained" size="small" onClick={()=>updateLike(galleryItem.id)} >LIKE</Button>
                     <div>
                         Likes: {galleryItem.likes}
                     </div>
