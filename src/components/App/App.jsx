@@ -4,6 +4,8 @@ import './App.css';
 import Header from './Header.jsx'
 import GalleryList from './GalleryList.jsx'
 
+
+
 function App() {
   useEffect(() => {
     fetchGallery();
