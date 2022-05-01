@@ -4,7 +4,7 @@
 
 _Duration: 10 hours_
 
-This is the first app I built using react. We were not asked to utilize a database for this this project. All of the info comes from gallery.data.js and requests to the server. 
+This is the first app I built using react. We were not asked to utilize a database for this this project. All of the info comes from gallery.data.js and requests to the server. The main features of this app are the ability to 'LIKE' a picture, and the ability to toggle between the picture and the description of the picture.
 
 
 ![alt text](reactApp.png)
